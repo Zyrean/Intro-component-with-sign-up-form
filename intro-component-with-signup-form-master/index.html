@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Frontend Mentor | Intro component with sign up form</title>
+  </head>
+  <body>
+    <div class="container-main">
+      <div class="container-description">
+        <h1>Learn to code by watching others</h1>
+        <p>
+          See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but
+          understanding how developers think is invaluable.
+        </p>
+      </div>
+      <div class="container-aboAndInput">
+        <div class="container-abo">
+          <p><span>Try it free 7 days </span>then $20/mo. thereafter</p>
+        </div>
+        <div class="container-input">
+          <form action="">
+            <input
+              type="text"
+              name="firstname"
+              id="firstname"
+              min="1"
+              maxlength="30"
+              placeholder="First Name"
+              required
+            />
+            <div class="error error-status-firstname hidden">
+              <img src="images/icon-error.svg" alt="" />
+              <p class="input-error-message">First name cannot be empty</p>
+            </div>
+            <input type="text" name="lastname" id="lastname" min="1" maxlength="30" placeholder="Last Name" required />
+            <div class="error error-status-lastname hidden">
+              <img src="images/icon-error.svg" alt="" />
+              <p class="input-error-message">Last name cannot be empty</p>
+            </div>
+            <input type="email" name="email" id="email" min="1" maxlength="30" placeholder="Email Address" required />
+            <div class="error error-status-email hidden">
+              <img src="images/icon-error.svg" alt="" />
+              <p class="input-error-message">Email cannot be empty</p>
+            </div>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              min="1"
+              maxlength="30"
+              placeholder="Password"
+              required
+            />
+            <div class="error error-status-password hidden">
+              <img src="images/icon-error.svg" alt="" />
+              <p class="input-error-message">Password cannot be empty</p>
+            </div>
+            <button class="submitBtn">CLAIM YOUR FREE TRIAL</button>
+            <p class="termsAndServices">
+              By clicking the button, you are agreeing to our <span>Terms and Services</span>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="js/main.js"></script>
+</html>
