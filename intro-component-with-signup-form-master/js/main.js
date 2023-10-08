@@ -58,11 +58,7 @@ const checkInput = function () {
     // Input is valid hide all Errors
     else {
       hideError(inp.id, inp);
-      console.log(i);
-      console.log(inp[i]);
-      console.log(inp[i].value);
     }
-    // return {firstName: inp[i].value}
   });
 };
 
@@ -71,69 +67,9 @@ submitBtn.addEventListener("click", function (e) {
   checkInput();
 });
 
-///////////////////////////////Backup///////////////////////////////////////
-
-// const submitBtn = document.querySelector(".submitBtn");
-// const inputFields = document.querySelectorAll("input");
-// const errorMsg = document.querySelectorAll(".error");
-// const errorEmail = document.querySelector(".error-status-email");
-
-// const formatText = function (str) {
-//   const out = str.toLowerCase().charAt(0).toUpperCase() + str.slice(1).trim();
-//   console.log(out);
-// };
-
-// const checkEmail = function (email) {
-//   const emailForm = email.toLowerCase().charAt(0).toUpperCase() + email.slice(1);
-//   const re = /\S+@\S+\.\S+/;
-//   return re.test(emailForm);
-// };
-
-// const displayError = function (element) {
-//   errorMsg.forEach((ele) => {
-//     ele.classList.contains(`error-status-${element}`) ? ele.classList.remove("hidden") : "";
-//   });
-// };
-
-// const hideError = function (element) {
-//   errorMsg.forEach((ele) => {
-//     ele.classList.contains(`error-status-${element}`) ? ele.classList.add("hidden") : "";
-//   });
-// };
-
-// const displayBorder = (inpEle) => {
-//   inpEle.style.border = "1px solid red";
-//   inpEle.removeAttribute("placeholder");
-// };
-
-// const hideBorder = (inpEle) => {
-//   inpEle.style.border = "1px solid var(--blue)";
-// };
-
-// const checkInput = function () {
-//   inputFields.forEach((inp) => {
-//     // Check if input is empty
-//     if (!inp.value) {
-//       displayError(inp.id);
-//       // Adding red border and clearing placeholders
-//       displayBorder(inp);
-//       // Check if email input is valid and hide/show error
-//     } else if (inp.type === "text") {
-//       formatText(inp.value);
-//       hideError(inp.id);
-//       hideBorder(inp);
-//     } else if (inp.type === "email") {
-//       checkEmail(inp.value) ? hideError(inp.id) : displayError(inp.id);
-//       // checkEmail(inp.value) ? console.log("BANANE") : console.log("ORANGE");
-//       errorEmail.querySelector(".input-error-message").textContent = "Look's like this is not an email!";
-//       hideBorder(inp);
-//     } else {
-//       hideError(inp.id);
-//       hideBorder(inp);
-//     }
-//   });
-// };
-
-// submitBtn.addEventListener("click", function () {
-//   checkInput();
-// });
+/// TODOS
+// 1. Form should only get bigger towards the bottom side
+// 2. Formatting inputted text (size and padding left)
+// 3. Saving data in an object
+// 4. Getting rid of weird spaces in desktop view (scared if fukcing everything up)
+// 5. Lining up der Eroor icon no matter how big the text below is
