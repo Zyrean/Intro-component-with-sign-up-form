@@ -22,6 +22,7 @@ body {
   height: 100vh;
   background-image: url(../images/bg-intro-mobile.png);
   background-color: var(--red);
+  font-family: "Poppins", sans-serif;
 }
 
 p {

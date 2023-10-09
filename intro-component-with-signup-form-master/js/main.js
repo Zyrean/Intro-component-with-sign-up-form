@@ -6,12 +6,12 @@ const errorMsg = document.querySelectorAll(".error");
 const errorEmail = document.querySelector(".error-status-email");
 
 const formatText = function (str) {
-  console.log(str.charAt(0).toUpperCase() + str.slice(1).toLowerCase().trim());
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase().trim();
 };
 
 const checkEmail = function (email) {
-  const emailForm = email.toLowerCase().charAt(0).toUpperCase() + email.slice(1);
+  // const emailForm = email.toLowerCase().charAt(0).toUpperCase() + email.slice(1);
+  const emailForm = formatText(email);
   const re = /\S+@\S+\.\S+/;
   return re.test(emailForm);
 };
