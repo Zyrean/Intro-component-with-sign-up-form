@@ -1,16 +1,15 @@
 "use strict";
 
+// VARIABLES
 const submitBtn = document.querySelector(".submitBtn");
 const inputFields = document.querySelectorAll("input");
 const errorMsg = document.querySelectorAll(".error");
 const errorEmail = document.querySelector(".error-status-email");
 
-const formatText = function (str) {
-  return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase().trim();
-};
+// FUNCTIONS
+const formatText = (str) => str.charAt(0).toUpperCase() + str.slice(1).toLowerCase().trim();
 
 const checkEmail = function (email) {
-  // const emailForm = email.toLowerCase().charAt(0).toUpperCase() + email.slice(1);
   const emailForm = formatText(email);
   const re = /\S+@\S+\.\S+/;
   return re.test(emailForm);
@@ -21,9 +20,7 @@ const displayBorder = (inpEle) => {
   inpEle.removeAttribute("placeholder");
 };
 
-const hideBorder = (inpEle) => {
-  inpEle.style.border = "1px solid var(--blue)";
-};
+const hideBorder = (inpEle) => (inpEle.style.border = "1px solid var(--blue)");
 
 const displayError = function (element, inpEle) {
   errorMsg.forEach((ele) => {
@@ -32,7 +29,7 @@ const displayError = function (element, inpEle) {
   displayBorder(inpEle);
 };
 
-const hideError = function (element, inpEle) {
+const hideError = (element, inpEle) => {
   errorMsg.forEach((ele) => {
     ele.classList.contains(`error-status-${element}`) ? ele.classList.add("hidden") : "";
   });
@@ -62,14 +59,8 @@ const checkInput = function () {
   });
 };
 
+// Events
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
   checkInput();
 });
-
-/// TODOS
-// 1. Form should only get bigger towards the bottom side
-// 2. Formatting inputted text (size and padding left)
-// 3. Saving data in an object
-// 4. Getting rid of weird spaces in desktop view (scared if fukcing everything up)
-// 5. Lining up der Eroor icon no matter how big the text below is
